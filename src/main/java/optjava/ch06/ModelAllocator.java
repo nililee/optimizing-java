@@ -1,4 +1,4 @@
-package optjava;
+package optjava.ch06;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -40,10 +40,9 @@ public class ModelAllocator implements Runnable {
         }
     }
 
-    // Simple function to model Weak Generational Hypothesis
-    // Returns the expected lifetime of an object - usually this
-    // is very short, but there is a small chance of an object
-    // being "long-lived"
+    // 약한 세대별 가설을 간단히 모형화한 함수
+    // 객체의 기대 수명을 반환함.
+    // 보통 객체 수명은 아주 짧지만, 드물게 "장수하는" 객체도 있음.
     public int lifetime() {
         if (Math.random() < chanceOfLongLived) {
             return multiplierForLongLived * shortLivedMs;

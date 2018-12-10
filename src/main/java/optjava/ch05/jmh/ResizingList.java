@@ -1,4 +1,4 @@
-package optjava.jmh;
+package optjava.ch05.jmh;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

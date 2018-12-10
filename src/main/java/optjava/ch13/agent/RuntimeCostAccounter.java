@@ -1,4 +1,4 @@
-package optjava.agent;
+package optjava.ch13.agent;
 
 /**
  *
@@ -13,8 +13,8 @@ public class RuntimeCostAccounter {
     };
 
     public static void recordAllocation(final String typeName) {
-        // More sophistication clearly necessary
-        // E.g. caching approximate sizes for types that we encounter
+        // 사실, 이것보다 정교한 코드가 필요하다.
+        // 가령, 타입에 맞는 대략적인 크기를 캐시하는...
         checkAllocationCost(1);
     }
 
@@ -25,10 +25,10 @@ public class RuntimeCostAccounter {
     private static void checkAllocationCost(final long additional) {
         final long newValue = additional + allocationCost.get();
         allocationCost.set(newValue);
-        // Take action? e.g. failing if some threshold has been exceeded
+        // 액션을 취해야 하나? 어떤 한계치를 초과할 경우 실패하는...?
     }
 
-    // This could be exposed, e.g via a JMX counter
+    // 이 메서드는 (JMX 계수기를 통해) 표출할 수 있다
     public static long getAllocationCost() {
         return allocationCost.get();
     }

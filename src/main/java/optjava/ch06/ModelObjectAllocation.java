@@ -1,8 +1,7 @@
-package optjava;
+package optjava.ch06;
 
 /**
- * This class contains an amount of storage and possesses a lifetime in milliseconds.
- * After the object has "expired" it will become eligible for GC.
+ *
  * 
  * @author ben
  */

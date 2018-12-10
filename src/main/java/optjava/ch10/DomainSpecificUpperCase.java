@@ -1,4 +1,4 @@
-package optjava;
+package optjava.ch10;
 
 import org.openjdk.jmh.annotations.*;
 import java.util.concurrent.TimeUnit;

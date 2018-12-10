@@ -28,7 +28,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  */
-package optjava.jmh;
+package optjava.ch05.jmh;
 
 import java.util.ArrayList;
 import java.util.Collections;

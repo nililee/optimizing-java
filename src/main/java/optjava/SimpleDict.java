@@ -1,4 +1,4 @@
-package optjava.ch11;
+package optjava;
 
 import java.util.Collection;
 import java.util.Map;

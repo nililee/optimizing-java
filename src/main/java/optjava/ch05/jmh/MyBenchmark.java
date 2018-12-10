@@ -1,4 +1,4 @@
-package optjava.jmh;
+package optjava.ch05.jmh;
 
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;

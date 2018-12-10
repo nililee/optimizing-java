@@ -3,6 +3,8 @@ package optjava.ch11;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import optjava.SimpleDict;
+
 /**
  *
  * @author ben

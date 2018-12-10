@@ -1,4 +1,4 @@
-package optjava.jmh;
+package optjava.ch05.jmh;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -8,7 +8,6 @@ import java.util.concurrent.TimeUnit;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Fork;
-import org.openjdk.jmh.annotations.Level;
 import org.openjdk.jmh.annotations.Measurement;
 import org.openjdk.jmh.annotations.Mode;
 import org.openjdk.jmh.annotations.OutputTimeUnit;
@@ -23,17 +22,15 @@ import org.openjdk.jmh.annotations.Warmup;
 @Measurement(iterations = 10, time = 1, timeUnit = TimeUnit.SECONDS)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @Fork(1)
-public class InsertBegin {
+public class AccessingList {
 	private static final String item = "*";
 	private static final int N = 1_000_000;
 	
-	private static List<String> arrayList = new ArrayList<>();
-	private static List<String> linkedList = new LinkedList<>();
+	private static final List<String> arrayList = new ArrayList<>();
+	private static final List<String> linkedList = new LinkedList<>();
 	
-	@Setup(Level.Invocation)
+	@Setup
 	public static final void setup() {
-		arrayList = new ArrayList<>();
-		linkedList = new LinkedList<>();
 		for (int i = 0; i < N; i++) {
 			arrayList.add(item);
 			linkedList.add(item);
@@ -41,14 +38,12 @@ public class InsertBegin {
 	}
 	
 	@Benchmark
-	public String beginArrayList() {
-		 arrayList.add(0, item);
-		 return arrayList.get(0);
+	public String accessArrayList() {
+		return arrayList.get(500_000);
 	}
 	
 	@Benchmark
-	public String beginLinkedList() {
-		 linkedList.add(0, item);
-		 return linkedList.get(0);
+	public String accessLinkedList() {
+		return linkedList.get(500_000);
 	}
 }
