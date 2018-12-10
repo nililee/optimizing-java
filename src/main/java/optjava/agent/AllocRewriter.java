@@ -9,7 +9,6 @@ import org.objectweb.asm.*;
  *
  * @author kittylyst
  */
-// tag::ALLOC_RECORDER[]
 public class AllocRewriter implements ClassFileTransformer {
 
     @Override
@@ -28,4 +27,3 @@ public class AllocRewriter implements ClassFileTransformer {
     }
 
 }
-// end::ALLOC_RECORDER[]

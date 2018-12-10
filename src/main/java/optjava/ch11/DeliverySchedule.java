@@ -6,7 +6,6 @@ import java.time.LocalDate;
  *
  * @author ben
  */
-// tag::DELIVERY_SCHEDULE[]
 public final class DeliverySchedule {
     private final LocalDate deliveryDate;
     private final String address;
@@ -27,4 +26,3 @@ public final class DeliverySchedule {
         return "DeliverySchedule{" + "deliveryDate=" + deliveryDate + ", address=" + address + ", deliveryCost=" + deliveryCost + '}';
     }
 }
-// end::DELIVERY_SCHEDULE[]

@@ -4,7 +4,6 @@ package optjava.agent;
  *
  * @author kittylyst
  */
-// tag::RUNTIME_RECORDER[]
 public class RuntimeCostAccounter {
     private static final ThreadLocal<Long> allocationCost = new ThreadLocal<Long>() {
         @Override
@@ -38,4 +37,3 @@ public class RuntimeCostAccounter {
         allocationCost.set(0L);
     }
 }
-// end::RUNTIME_RECORDER[]

@@ -54,7 +54,6 @@ import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
-// tag::SORT_BENCHMARK[]
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.Throughput)
 @Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
@@ -104,8 +103,6 @@ public class SortBenchmark {
         new Runner(opt).run();
     }
 }
-// end::SORT_BENCHMARK[]
-
 //Benchmark                                                     Mode  Cnt      Score      Error   Units
 //SortBenchmark.classicSort                                    thrpt   50  10854.506 ±   72.689   ops/s
 //SortBenchmark.classicSort:·gc.alloc.rate                     thrpt   50     75.095 ±    0.503  MB/sec

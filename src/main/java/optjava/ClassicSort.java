@@ -5,7 +5,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-// tag::CLASSIC_SORT[]
 public class ClassicSort {
     private static final int NUM_ITEMS = 100_000;
     private static final int ITERATIONS = 300_000;
@@ -31,4 +30,3 @@ public class ClassicSort {
         System.out.println("Result: " + (1 / timePerOperation) + " op/s");
     }
 }
-// end::CLASSIC_SORT[]

@@ -5,8 +5,6 @@ import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
-
-// tag::BENCHMARK_MAIN[]
 public class MyBenchmark {
 
     public static void main(String[] args) throws RunnerException {
@@ -19,5 +17,3 @@ public class MyBenchmark {
         new Runner(opt).run();
     }
 }
-// end::BENCHMARK_MAIN[]
-

@@ -4,7 +4,6 @@ package optjava.ch11;
  *
  * @author ben
  */
-// tag::ORDER_ITEM[]
 public class OrderItem {
     private final long id;
     private final String description;
@@ -21,4 +20,3 @@ public class OrderItem {
         return "OrderItem{" + "id=" + id + ", description=" + description + ", price=" + price + '}';
     }
 }
-// end::ORDER_ITEM[]

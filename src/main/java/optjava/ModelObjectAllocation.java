@@ -6,7 +6,6 @@ package optjava;
  * 
  * @author ben
  */
-// tag::OBJECT_ALLOC[]
 public class ModelObjectAllocation implements Runnable {
     private final byte[][] allocated;
     private final int lifeTime;
@@ -25,4 +24,3 @@ public class ModelObjectAllocation implements Runnable {
         }
     }
 }
-// end::OBJECT_ALLOC[]

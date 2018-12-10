@@ -7,7 +7,6 @@ import java.util.List;
  *
  * @author ben
  */
-// tag::ORDER[]
 public class Order {
     private final long id;
     private final List<OrderItem> items = new ArrayList<>();
@@ -33,4 +32,3 @@ public class Order {
         return id;
     }
 }
-// end::ORDER[]

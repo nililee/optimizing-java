@@ -7,7 +7,6 @@ import java.util.concurrent.Executors;
  *
  * @author ben
  */
-// tag::MODEL_ALLOC[]
 public class ModelAllocator implements Runnable {
     private volatile boolean shutdown = false;
 
@@ -19,14 +18,12 @@ public class ModelAllocator implements Runnable {
     private int shortLivedMs = 100;
     private int nThreads = 8;
     private Executor exec = Executors.newFixedThreadPool(nThreads);    
-// end::MODEL_ALLOC[]
 
     public static void main(String[] args) {
         ModelAllocator ma = new ModelAllocator();
         ma.run();
     }
 
-// tag::MODEL_ALLOC_MAIN[]
     public void run() {
         final int mainSleep = (int) (1000.0 / mbPerSec);
 
@@ -55,4 +52,3 @@ public class ModelAllocator implements Runnable {
         return shortLivedMs;
     }
 }
-// end::MODEL_ALLOC_MAIN[]

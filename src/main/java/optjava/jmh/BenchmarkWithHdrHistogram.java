@@ -11,7 +11,6 @@ import org.HdrHistogram.Histogram;
  * cat premature3.log | perl -ne 'print "$1\n" if /^([0-9]+\.[0-9]+).*$/' > millis.txt
  * @author ben
  */
-// tag::HDR_BENCHMARK[]
 public class BenchmarkWithHdrHistogram {
     private static final long NORMALIZER = 1_000_000;
     
@@ -30,4 +29,3 @@ public class BenchmarkWithHdrHistogram {
         HISTOGRAM.outputPercentileDistribution(System.out, 1000.0);
     }
 }
-// end::HDR_BENCHMARK[]
