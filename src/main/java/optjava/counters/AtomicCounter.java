@@ -3,6 +3,7 @@ package optjava.counters;
 import sun.misc.Unsafe;
 import java.lang.reflect.Field;
 
+@SuppressWarnings("restriction")
 public final class AtomicCounter implements Counter {
 
     private static final Unsafe unsafe; // = Unsafe.getUnsafe();

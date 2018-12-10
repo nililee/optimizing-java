@@ -40,7 +40,7 @@ public final class SHA256Finder {
 
         // Search indefinitely for a match
         String candidate = null;
-        FOREVER:
+        // FOREVER:
         while (true) {
             candidate = makeRandomString(length);
             if (++attempts % 100_000 == 0) {
